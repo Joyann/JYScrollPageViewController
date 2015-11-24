@@ -25,6 +25,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     JYScrollPageViewConrtoller *pageVC = [[JYScrollPageViewConrtoller alloc] init];
+    UINavigationController *naviControlelr = [[UINavigationController alloc] initWithRootViewController:pageVC];
     
     JYPageViewController1 *page1 = [[JYPageViewController1 alloc] init];
     page1.view.backgroundColor = [UIColor blueColor];
@@ -41,12 +42,11 @@
     JYPageViewController5 *page5 = [[JYPageViewController5 alloc] init];
     page5.view.backgroundColor = [UIColor purpleColor];
     
-    self.window.rootViewController = pageVC;
+    self.window.rootViewController = naviControlelr;
     [self.window makeKeyAndVisible];
     
-    pageVC.showScrollBar = YES;
-
     pageVC.pageViewControllers = @[page1, page2, page3, page4, page5];
+    
     return YES;
 }
 

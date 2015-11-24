@@ -49,6 +49,8 @@ static const CGFloat kScrollBarDefaultOriginY = 0;
     self.view.backgroundColor = [UIColor whiteColor];
 
     self.showScrollBar = YES;
+    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
 #pragma mark - Add
