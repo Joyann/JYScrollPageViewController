@@ -27,4 +27,9 @@
  */
 @property (nonatomic, strong) NSArray <UIViewController <JYScrollPageViewConrtollerDelegate> *> *pageViewControllers;
 
+/**
+ *  设置scrollBar的大小和位置.
+ */
+@property (nonatomic, assign) CGRect scrollBarFrame;
+
 @end

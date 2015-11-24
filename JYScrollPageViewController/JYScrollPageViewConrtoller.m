@@ -67,6 +67,13 @@ static const CGFloat kScrollBarDefaultOriginY = 0;
     [self update];
 }
 
+- (void)setScrollBarFrame:(CGRect)scrollBarFrame
+{
+    _scrollBarFrame = scrollBarFrame;
+    
+    self.scrollBar.frame = scrollBarFrame;
+}
+
 #pragma mark - Helper Methdos
 
 - (void)update

@@ -25,8 +25,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     JYScrollPageViewConrtoller *pageVC = [[JYScrollPageViewConrtoller alloc] init];
 
-    
-    
     JYPageViewController1 *page1 = [[JYPageViewController1 alloc] init];
     page1.view.backgroundColor = [UIColor blueColor];
     
@@ -39,14 +37,10 @@
     JYPageViewController4 *page4 = [[JYPageViewController4 alloc] init];
     page4.view.backgroundColor = [UIColor redColor];
     
-    
-    
     self.window.rootViewController = pageVC;
     [self.window makeKeyAndVisible];
     
-
     pageVC.pageViewControllers = @[page1, page2, page3, page4];
-
 
     
     return YES;
