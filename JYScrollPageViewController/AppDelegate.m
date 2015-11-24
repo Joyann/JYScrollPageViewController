@@ -20,7 +20,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -46,6 +45,8 @@
     [self.window makeKeyAndVisible];
     
     pageVC.pageViewControllers = @[page1, page2, page3, page4, page5];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
     
     return YES;
 }
