@@ -16,7 +16,7 @@
 
 - (NSString *)titleForPageViewController
 {
-    return @"页面嘿嘿";
+    return @"最新";
 }
 
 @end

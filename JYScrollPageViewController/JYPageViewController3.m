@@ -16,7 +16,7 @@
 
 - (NSString *)titleForPageViewController
 {
-    return @"吼哈哈";
+    return @"生活家";
 }
 
 @end

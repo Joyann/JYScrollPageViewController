@@ -12,6 +12,7 @@
 #import "JYPageViewController2.h"
 #import "JYPageViewController3.h"
 #import "JYPageViewController4.h"
+#import "JYPageViewController5.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +25,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     JYScrollPageViewConrtoller *pageVC = [[JYScrollPageViewConrtoller alloc] init];
-
+    
     JYPageViewController1 *page1 = [[JYPageViewController1 alloc] init];
     page1.view.backgroundColor = [UIColor blueColor];
     
@@ -37,12 +38,15 @@
     JYPageViewController4 *page4 = [[JYPageViewController4 alloc] init];
     page4.view.backgroundColor = [UIColor redColor];
     
+    JYPageViewController5 *page5 = [[JYPageViewController5 alloc] init];
+    page5.view.backgroundColor = [UIColor purpleColor];
+    
     self.window.rootViewController = pageVC;
     [self.window makeKeyAndVisible];
     
-    pageVC.pageViewControllers = @[page1, page2, page3, page4];
+    pageVC.showScrollBar = YES;
 
-    
+    pageVC.pageViewControllers = @[page1, page2, page3, page4, page5];
     return YES;
 }
 

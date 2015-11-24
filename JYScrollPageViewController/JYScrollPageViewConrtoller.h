@@ -10,6 +10,21 @@
 
 @class JYScrollPageViewConrtoller;
 
+typedef NS_ENUM(NSInteger, JYScrollPageViewTransitionType) {
+    /**
+     *  从右向左切换控制器view.
+     */
+    JYScrollPageViewTransitionTypeRight2Left,
+    /**
+     *  从左向右切换控制器view.
+     */
+    JYScrollPageViewTransitionTypeLeft2Right,
+    /**
+     *  根据scrollBar的点击自动切换控制器view.如果下一次点击的标题在当前的右边，则从右向左切换；如果在当前的左边，则从左向右切换.
+     */
+    JYScrollPageViewTransitionTypeAutomatic
+};
+
 /**
  *  在pageVC中的控制器必须遵守此协议，并且实现@required中的方法.
  */
@@ -31,5 +46,15 @@
  *  设置scrollBar的大小和位置.
  */
 @property (nonatomic, assign) CGRect scrollBarFrame;
+
+/**
+ *  切换控制器view的方向.默认为`JYScrollPageViewTransitionTypeAutomatic`切换.
+ */
+@property (nonatomic, assign) JYScrollPageViewTransitionType transitionType;
+
+/**
+ *  决定是否显示scrollBar.默认为YES.
+ */
+@property (nonatomic, assign) BOOL showScrollBar;
 
 @end

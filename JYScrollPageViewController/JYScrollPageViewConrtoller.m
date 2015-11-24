@@ -11,7 +11,7 @@
 
 #define kScrollBarDefaultWidth self.view.bounds.size.width
 
-static const CGFloat kScrollBarDefaultHeight  = 50.0;
+static const CGFloat kScrollBarDefaultHeight  = 44.0;
 static const CGFloat kScrollBarDefaultOriginX = 0;
 static const CGFloat kScrollBarDefaultOriginY = 0;
 
@@ -30,7 +30,7 @@ static const CGFloat kScrollBarDefaultOriginY = 0;
     
     [self addPageViewController];
     
-    [self addScrollBar];
+    [self commonInit];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -40,7 +40,16 @@ static const CGFloat kScrollBarDefaultOriginY = 0;
     [self update];
 }
 
+#pragma mark - Common Init
 
+- (void)commonInit
+{
+    self.transitionType = JYScrollPageViewTransitionTypeAutomatic;
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+
+    self.showScrollBar = YES;
+}
 
 #pragma mark - Add
 
@@ -59,6 +68,20 @@ static const CGFloat kScrollBarDefaultOriginY = 0;
 }
 
 #pragma mark - Setter Methods
+
+- (void)setShowScrollBar:(BOOL)showScrollBar
+{
+    if (_showScrollBar != showScrollBar) {
+        _showScrollBar = showScrollBar;
+        
+        if (!_showScrollBar) {
+            [self removeScrollBar];
+        } else {
+            [self addScrollBar];
+        }
+    }
+
+}
 
 - (void)setPageViewControllers:(NSArray<UIViewController<JYScrollPageViewConrtollerDelegate> *> *)pageViewControllers
 {
@@ -109,6 +132,12 @@ static const CGFloat kScrollBarDefaultOriginY = 0;
     self.scrollBar.sectionTitles = titles;
 }
 
+- (void)removeScrollBar
+{
+    [self.scrollBar removeFromSuperview];
+    self.scrollBar = nil;
+}
+
 - (void)addScrollBar
 {
     // 添加scrollBar.
@@ -117,9 +146,30 @@ static const CGFloat kScrollBarDefaultOriginY = 0;
     self.scrollBar = scrollBar;
     
     // 当scrollBar发生点击标题事件的时候会回调这个block.相当于将值从scrollBar传到当前类中.
-    [scrollBar didSelectedWithComletionHandler:^(NSInteger selecedIndex) {
+    [scrollBar didSelectedWithComletionHandler:^(NSInteger preInex, NSInteger selecedIndex) {
         // 当发生点击标题事件的时候，设置这个标题对应的控制器
-        [self.pageVC setViewControllers:@[self.pageViewControllers[selecedIndex]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+        UIPageViewControllerNavigationDirection direction;
+        switch (self.transitionType) {
+            case JYScrollPageViewTransitionTypeLeft2Right:
+            {
+                direction = UIPageViewControllerNavigationDirectionReverse;
+                break;
+            }
+            case JYScrollPageViewTransitionTypeRight2Left:
+            {
+                direction = UIPageViewControllerNavigationDirectionForward;
+                break;
+            }
+            case JYScrollPageViewTransitionTypeAutomatic:
+            {
+                NSInteger result = selecedIndex - preInex;
+                direction = (result > 0) ? UIPageViewControllerNavigationDirectionForward : UIPageViewControllerNavigationDirectionReverse;
+                break;
+            }
+            default:
+                break;
+        }
+        [self.pageVC setViewControllers:@[self.pageViewControllers[selecedIndex]] direction:direction animated:YES completion:nil];
     }];
 }
 
@@ -156,7 +206,6 @@ static const CGFloat kScrollBarDefaultOriginY = 0;
     if (!completed) {
         return;
     }
-    
     // 当手势拖动vc完毕并且动画结束，设置当前vc对应的scrollBar的标题
     // self.pageVC.viewControllers即为当前显示的vc的数组.这个数组中只有一个当前正在显示的vc.
     NSInteger currentIndex = [self.pageViewControllers indexOfObject:self.pageVC.viewControllers.firstObject];

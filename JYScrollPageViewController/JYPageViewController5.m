@@ -1,22 +1,22 @@
 //
-//  JYPageViewController4.m
+//  JYPageViewController5.m
 //  JYScrollPageViewController
 //
 //  Created by joyann on 15/11/24.
 //  Copyright © 2015年 Joyann. All rights reserved.
 //
 
-#import "JYPageViewController4.h"
+#import "JYPageViewController5.h"
 
-@interface JYPageViewController4 ()
+@interface JYPageViewController5 ()
 
 @end
 
-@implementation JYPageViewController4
+@implementation JYPageViewController5
 
 - (NSString *)titleForPageViewController
 {
-    return @"世间事";
+    return @"@IT";
 }
 
 @end

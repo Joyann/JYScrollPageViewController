@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		629B4BB81C03EE8E00F89F92 /* JYPageViewController5.m in Sources */ = {isa = PBXBuildFile; fileRef = 629B4BB71C03EE8E00F89F92 /* JYPageViewController5.m */; };
 		62C3A5C11C031EA800E23FD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C3A5C01C031EA800E23FD8 /* main.m */; };
 		62C3A5C41C031EA800E23FD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C3A5C31C031EA800E23FD8 /* AppDelegate.m */; };
 		62C3A5CA1C031EA800E23FD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62C3A5C81C031EA800E23FD8 /* Main.storyboard */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		629B4BB61C03EE8E00F89F92 /* JYPageViewController5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYPageViewController5.h; sourceTree = "<group>"; };
+		629B4BB71C03EE8E00F89F92 /* JYPageViewController5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYPageViewController5.m; sourceTree = "<group>"; };
 		62C3A5BC1C031EA800E23FD8 /* JYScrollPageViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYScrollPageViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62C3A5C01C031EA800E23FD8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		62C3A5C21C031EA800E23FD8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 				62C3A5F61C032B1400E23FD8 /* JYScrollBar.m */,
 				62C3A5C21C031EA800E23FD8 /* AppDelegate.h */,
 				62C3A5C31C031EA800E23FD8 /* AppDelegate.m */,
+				629B4BB61C03EE8E00F89F92 /* JYPageViewController5.h */,
+				629B4BB71C03EE8E00F89F92 /* JYPageViewController5.m */,
 				62C3A6041C0370DD00E23FD8 /* JYPageViewController4.h */,
 				62C3A6051C0370DD00E23FD8 /* JYPageViewController4.m */,
 				62C3A6011C036D3A00E23FD8 /* JYPageViewController3.h */,
@@ -304,6 +309,7 @@
 				62C3A6031C036D3A00E23FD8 /* JYPageViewController3.m in Sources */,
 				62C3A6001C03397900E23FD8 /* JYPageViewController2.m in Sources */,
 				62C3A6061C0370DD00E23FD8 /* JYPageViewController4.m in Sources */,
+				629B4BB81C03EE8E00F89F92 /* JYPageViewController5.m in Sources */,
 				62C3A5C11C031EA800E23FD8 /* main.m in Sources */,
 				62C3A5F71C032B1400E23FD8 /* JYScrollBar.m in Sources */,
 			);
@@ -531,6 +537,7 @@
 				62C3A5EB1C031EA800E23FD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62C3A5EC1C031EA800E23FD8 /* Build configuration list for PBXNativeTarget "JYScrollPageViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +546,7 @@
 				62C3A5EE1C031EA800E23FD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62C3A5EF1C031EA800E23FD8 /* Build configuration list for PBXNativeTarget "JYScrollPageViewControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +555,7 @@
 				62C3A5F11C031EA800E23FD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

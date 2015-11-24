@@ -8,9 +8,9 @@
 
 #import "JYScrollBar.h"
 
-#define kNumberOfTitlesPerScreen        4
-#define kScrollBarDefultTitleFontSize   20.0
-#define kSectionTitleButtonMargin       20.0
+#define kNumberOfTitlesPerScreen        5
+#define kScrollBarDefultTitleFontSize   17.0
+#define kSectionTitleButtonMargin       5.0
 #define kScrollBarCenterY               self.bounds.size.height * 0.5
 #define kScrollBarDefaultColor          [UIColor colorWithRed:0.6 green:0.62 blue:0.68 alpha:1]
 #define kScrollBarTextDefaultColor      [UIColor colorWithRed:0.84 green:0.84 blue:0.85 alpha:1]
@@ -18,10 +18,12 @@
 @interface JYScrollBar ()
 
 @property (nonatomic, strong) NSArray <UIButton *>* titleButtons;
+
 @property (nonatomic, weak) UIScrollView *scrollView;
 
 @property (nonatomic, assign) NSInteger selectedIndex;
 @property (nonatomic, assign) NSInteger preSelectedIndex;
+@property (nonatomic, assign) NSInteger oldPreSelectedIndex;
 
 @property (nonatomic, copy) JYScrollBarDidSelectedCompletionBlock didSelectedBlock;
 
@@ -58,7 +60,8 @@
     self.titleButtons = buttons;
     
     // 根据`numberOfTitlesForOneScreen`计算label适合的宽度.
-    CGFloat w = self.bounds.size.width / ((self.numberOfTitlesForOneScreen != 0) ? self.numberOfTitlesForOneScreen : kNumberOfTitlesPerScreen) ;
+    NSInteger numberOfTitles = (self.numberOfTitlesForOneScreen != 0) ? self.numberOfTitlesForOneScreen : kNumberOfTitlesPerScreen;
+    CGFloat w = (self.bounds.size.width - numberOfTitles * kNumberOfTitlesPerScreen) / numberOfTitles ;
 
     CGFloat h = 30.0;
     
@@ -99,7 +102,7 @@
     NSInteger index = [self.titleButtons indexOfObject:titleButton];
     self.selectedIndex = index;
     
-    self.didSelectedBlock(self.selectedIndex);
+    self.didSelectedBlock(self.oldPreSelectedIndex, self.selectedIndex);
 }
 
 #pragma mark - Common Init
@@ -132,12 +135,14 @@
         
         if (self.titleButtons.count) {
             
+            self.oldPreSelectedIndex = self.preSelectedIndex;
+            
             UIButton *preButton = self.titleButtons[self.preSelectedIndex];
             [preButton setTitleColor:kScrollBarTextDefaultColor forState:UIControlStateNormal];
             
             UIButton *currentButton = self.titleButtons[selectedIndex];
             [currentButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-
+            
             self.preSelectedIndex = selectedIndex;
         }
     }

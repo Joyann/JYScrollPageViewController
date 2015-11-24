@@ -12,7 +12,7 @@
 
 - (NSString *)titleForPageViewController
 {
-    return @"页面哈哈";
+    return @"热门";
 }
 
 @end

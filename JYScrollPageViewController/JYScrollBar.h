@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 typedef void (^JYScrollBarNoParametersCompletionBlock)();
-typedef void (^JYScrollBarDidSelectedCompletionBlock)(NSInteger);
+typedef void (^JYScrollBarDidSelectedCompletionBlock)(NSInteger, NSInteger);
 
 @interface JYScrollBar : UIView
 
@@ -29,7 +29,7 @@ typedef void (^JYScrollBarDidSelectedCompletionBlock)(NSInteger);
 @property (nonatomic, strong) UIColor *scrollBarTextColor;
 
 /**
- *  设置scrollBar上的标题文字大小.默认为20.0.
+ *  设置scrollBar上的标题文字大小.默认为17.0.
  */
 @property (nonatomic, assign) CGFloat scrollBarTitleFontSize;
 
