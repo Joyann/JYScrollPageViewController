@@ -123,16 +123,7 @@
 				62FC1DC41C07180F0090D1BB /* JYScrollPageViewController */,
 				62C3A5C21C031EA800E23FD8 /* AppDelegate.h */,
 				62C3A5C31C031EA800E23FD8 /* AppDelegate.m */,
-				629B4BB61C03EE8E00F89F92 /* JYPageViewController5.h */,
-				629B4BB71C03EE8E00F89F92 /* JYPageViewController5.m */,
-				62C3A6041C0370DD00E23FD8 /* JYPageViewController4.h */,
-				62C3A6051C0370DD00E23FD8 /* JYPageViewController4.m */,
-				62C3A6011C036D3A00E23FD8 /* JYPageViewController3.h */,
-				62C3A6021C036D3A00E23FD8 /* JYPageViewController3.m */,
-				62C3A5FB1C03395F00E23FD8 /* JYPageViewController1.h */,
-				62C3A5FC1C03395F00E23FD8 /* JYPageViewController1.m */,
-				62C3A5FE1C03397900E23FD8 /* JYPageViewController2.h */,
-				62C3A5FF1C03397900E23FD8 /* JYPageViewController2.m */,
+				62FC1DCC1C07189F0090D1BB /* ViewControllers */,
 				62C3A5C81C031EA800E23FD8 /* Main.storyboard */,
 				62C3A5CB1C031EA800E23FD8 /* Assets.xcassets */,
 				62C3A5CD1C031EA800E23FD8 /* LaunchScreen.storyboard */,
@@ -178,6 +169,23 @@
 				62FC1DC91C07180F0090D1BB /* JYScrollPageViewConrtoller.m */,
 			);
 			path = JYScrollPageViewController;
+			sourceTree = "<group>";
+		};
+		62FC1DCC1C07189F0090D1BB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				629B4BB61C03EE8E00F89F92 /* JYPageViewController5.h */,
+				629B4BB71C03EE8E00F89F92 /* JYPageViewController5.m */,
+				62C3A6041C0370DD00E23FD8 /* JYPageViewController4.h */,
+				62C3A6051C0370DD00E23FD8 /* JYPageViewController4.m */,
+				62C3A6011C036D3A00E23FD8 /* JYPageViewController3.h */,
+				62C3A6021C036D3A00E23FD8 /* JYPageViewController3.m */,
+				62C3A5FB1C03395F00E23FD8 /* JYPageViewController1.h */,
+				62C3A5FC1C03395F00E23FD8 /* JYPageViewController1.m */,
+				62C3A5FE1C03397900E23FD8 /* JYPageViewController2.h */,
+				62C3A5FF1C03397900E23FD8 /* JYPageViewController2.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
