@@ -15,12 +15,12 @@
 		62C3A5CF1C031EA800E23FD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62C3A5CD1C031EA800E23FD8 /* LaunchScreen.storyboard */; };
 		62C3A5DA1C031EA800E23FD8 /* JYScrollPageViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C3A5D91C031EA800E23FD8 /* JYScrollPageViewControllerTests.m */; };
 		62C3A5E51C031EA800E23FD8 /* JYScrollPageViewControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C3A5E41C031EA800E23FD8 /* JYScrollPageViewControllerUITests.m */; };
-		62C3A5F71C032B1400E23FD8 /* JYScrollBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C3A5F61C032B1400E23FD8 /* JYScrollBar.m */; };
-		62C3A5FA1C032E0100E23FD8 /* JYScrollPageViewConrtoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C3A5F91C032E0100E23FD8 /* JYScrollPageViewConrtoller.m */; };
 		62C3A5FD1C03395F00E23FD8 /* JYPageViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C3A5FC1C03395F00E23FD8 /* JYPageViewController1.m */; };
 		62C3A6001C03397900E23FD8 /* JYPageViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C3A5FF1C03397900E23FD8 /* JYPageViewController2.m */; };
 		62C3A6031C036D3A00E23FD8 /* JYPageViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C3A6021C036D3A00E23FD8 /* JYPageViewController3.m */; };
 		62C3A6061C0370DD00E23FD8 /* JYPageViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C3A6051C0370DD00E23FD8 /* JYPageViewController4.m */; };
+		62FC1DCA1C07180F0090D1BB /* JYScrollBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FC1DC61C07180F0090D1BB /* JYScrollBar.m */; };
+		62FC1DCB1C07180F0090D1BB /* JYScrollPageViewConrtoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FC1DC91C07180F0090D1BB /* JYScrollPageViewConrtoller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +57,6 @@
 		62C3A5E01C031EA800E23FD8 /* JYScrollPageViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JYScrollPageViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62C3A5E41C031EA800E23FD8 /* JYScrollPageViewControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYScrollPageViewControllerUITests.m; sourceTree = "<group>"; };
 		62C3A5E61C031EA800E23FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62C3A5F51C032B1400E23FD8 /* JYScrollBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYScrollBar.h; sourceTree = "<group>"; };
-		62C3A5F61C032B1400E23FD8 /* JYScrollBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYScrollBar.m; sourceTree = "<group>"; };
-		62C3A5F81C032E0100E23FD8 /* JYScrollPageViewConrtoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYScrollPageViewConrtoller.h; sourceTree = "<group>"; };
-		62C3A5F91C032E0100E23FD8 /* JYScrollPageViewConrtoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYScrollPageViewConrtoller.m; sourceTree = "<group>"; };
 		62C3A5FB1C03395F00E23FD8 /* JYPageViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYPageViewController1.h; sourceTree = "<group>"; };
 		62C3A5FC1C03395F00E23FD8 /* JYPageViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYPageViewController1.m; sourceTree = "<group>"; };
 		62C3A5FE1C03397900E23FD8 /* JYPageViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYPageViewController2.h; sourceTree = "<group>"; };
@@ -69,6 +65,11 @@
 		62C3A6021C036D3A00E23FD8 /* JYPageViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYPageViewController3.m; sourceTree = "<group>"; };
 		62C3A6041C0370DD00E23FD8 /* JYPageViewController4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYPageViewController4.h; sourceTree = "<group>"; };
 		62C3A6051C0370DD00E23FD8 /* JYPageViewController4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYPageViewController4.m; sourceTree = "<group>"; };
+		62FC1DC51C07180F0090D1BB /* JYScrollBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYScrollBar.h; sourceTree = "<group>"; };
+		62FC1DC61C07180F0090D1BB /* JYScrollBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYScrollBar.m; sourceTree = "<group>"; };
+		62FC1DC71C07180F0090D1BB /* JYScrollPageControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYScrollPageControllerDelegate.h; sourceTree = "<group>"; };
+		62FC1DC81C07180F0090D1BB /* JYScrollPageViewConrtoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYScrollPageViewConrtoller.h; sourceTree = "<group>"; };
+		62FC1DC91C07180F0090D1BB /* JYScrollPageViewConrtoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYScrollPageViewConrtoller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,10 +120,7 @@
 		62C3A5BE1C031EA800E23FD8 /* JYScrollPageViewController */ = {
 			isa = PBXGroup;
 			children = (
-				62C3A5F81C032E0100E23FD8 /* JYScrollPageViewConrtoller.h */,
-				62C3A5F91C032E0100E23FD8 /* JYScrollPageViewConrtoller.m */,
-				62C3A5F51C032B1400E23FD8 /* JYScrollBar.h */,
-				62C3A5F61C032B1400E23FD8 /* JYScrollBar.m */,
+				62FC1DC41C07180F0090D1BB /* JYScrollPageViewController */,
 				62C3A5C21C031EA800E23FD8 /* AppDelegate.h */,
 				62C3A5C31C031EA800E23FD8 /* AppDelegate.m */,
 				629B4BB61C03EE8E00F89F92 /* JYPageViewController5.h */,
@@ -168,6 +166,18 @@
 				62C3A5E61C031EA800E23FD8 /* Info.plist */,
 			);
 			path = JYScrollPageViewControllerUITests;
+			sourceTree = "<group>";
+		};
+		62FC1DC41C07180F0090D1BB /* JYScrollPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				62FC1DC51C07180F0090D1BB /* JYScrollBar.h */,
+				62FC1DC61C07180F0090D1BB /* JYScrollBar.m */,
+				62FC1DC71C07180F0090D1BB /* JYScrollPageControllerDelegate.h */,
+				62FC1DC81C07180F0090D1BB /* JYScrollPageViewConrtoller.h */,
+				62FC1DC91C07180F0090D1BB /* JYScrollPageViewConrtoller.m */,
+			);
+			path = JYScrollPageViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,13 +315,13 @@
 			files = (
 				62C3A5C41C031EA800E23FD8 /* AppDelegate.m in Sources */,
 				62C3A5FD1C03395F00E23FD8 /* JYPageViewController1.m in Sources */,
-				62C3A5FA1C032E0100E23FD8 /* JYScrollPageViewConrtoller.m in Sources */,
 				62C3A6031C036D3A00E23FD8 /* JYPageViewController3.m in Sources */,
 				62C3A6001C03397900E23FD8 /* JYPageViewController2.m in Sources */,
 				62C3A6061C0370DD00E23FD8 /* JYPageViewController4.m in Sources */,
 				629B4BB81C03EE8E00F89F92 /* JYPageViewController5.m in Sources */,
 				62C3A5C11C031EA800E23FD8 /* main.m in Sources */,
-				62C3A5F71C032B1400E23FD8 /* JYScrollBar.m in Sources */,
+				62FC1DCA1C07180F0090D1BB /* JYScrollBar.m in Sources */,
+				62FC1DCB1C07180F0090D1BB /* JYScrollPageViewConrtoller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

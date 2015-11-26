@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JYScrollPageViewConrtoller.h"
+#import "JYScrollPageControllerDelegate.h"
 
 @interface JYPageViewController2 : UIViewController <JYScrollPageViewConrtollerDelegate>
 

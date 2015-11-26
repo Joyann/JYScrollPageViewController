@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JYScrollPageControllerDelegate.h"
 
 @class JYScrollPageViewConrtoller;
+@class JYScrollPageControllerDelegate;
 
 typedef NS_ENUM(NSInteger, JYScrollPageViewTransitionType) {
     /**
@@ -24,16 +26,6 @@ typedef NS_ENUM(NSInteger, JYScrollPageViewTransitionType) {
      */
     JYScrollPageViewTransitionTypeAutomatic
 };
-
-/**
- *  在pageVC中的控制器必须遵守此协议，并且实现@required中的方法.
- */
-@protocol JYScrollPageViewConrtollerDelegate <NSObject>
-
-@required
-- (NSString *)titleForPageViewController;
-
-@end
 
 @interface JYScrollPageViewConrtoller : UIViewController
 
